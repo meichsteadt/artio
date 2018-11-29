@@ -1,0 +1,192 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+html {
+  font-family: 'Montserrat';
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h1,h2,h3,h4 {
+  font-family: "Open Sans";
+}
+
+.btn.white {
+  color: #333;
+}
+
+#navbar {
+  height: 50px;
+  background-color: #fff;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  padding: 0 25px;
+  z-index: 99;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+
+  .logo {
+    float: left;
+
+    img {
+      width: 45px;
+      margin: 10px 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    li {
+      margin: 5px;
+      a {
+        color: #333;
+      }
+
+      .active {
+        border-bottom: 1px solid #333;
+      }
+    }
+  }
+}
+
+#splash {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+
+  .bg {
+      filter: brightness(.7);
+  }
+
+  .info {
+    h1 {
+      font-family: 'Montserrat';
+      font-size: 40px;
+    }
+    h4 {
+
+    }
+    letter-spacing: 2px;
+    color: #fff;
+    padding-top: 100px;
+    padding-left: 40%;
+    line-height: 60px;
+
+    .btn {
+      margin-top: 20px;
+      color: #333;
+    }
+  }
+}
+
+#about {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 80px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .col {
+    img {
+      width: 60%;
+      display: block;
+      margin: 10px auto;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}
+
+#signup {
+  min-height: 85vh;
+  margin-bottom: 5px;
+
+  h1 {
+    font-size: 36px;
+    margin: 10px 15px 20px 15px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 20px 40px;
+    line-height: 24px;
+  }
+
+  .btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  .col {
+    padding: 0;
+  }
+  .bg {
+    width: 100%;
+    min-height: 85vh;
+    background: url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0d424e0c724d80f5f3b23c02201b8648&auto=format&fit=crop&w=1349&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .modal.open {
+    min-height: 50vh;
+
+    .modal-content {
+      background-color: #fff;
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    text-align: center;
+  }
+}
