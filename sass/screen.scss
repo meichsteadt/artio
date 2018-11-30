@@ -101,10 +101,31 @@ h1,h2,h3,h4 {
       color: #333;
     }
   }
+
+// ipad portrait mode
+  @media screen and (max-width: 769px) {
+    & {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+
+      .info {
+        padding: 0;
+        text-align: center;
+        line-height: 40px;
+
+        h1 {
+          font-size: 26px;
+        }
+      }
+    }
+  }
 }
 
 #about {
-  min-height: 85vh;
+  min-height: 75vh;
+  padding-bottom: calc(25vh);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,9 +134,23 @@ h1,h2,h3,h4 {
 
   h1 {
     font-size: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     text-align: center;
     width: 100%;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  i {
+    font-size: 68px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    color: #777;
   }
 
   .col {
@@ -129,6 +164,22 @@ h1,h2,h3,h4 {
       font-size: 16px;
       line-height: 24px;
       text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    & {
+      min-height: 65vh;
+      padding-bottom: 0;
+
+      h1 {
+        font-size: 30px;
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
     }
   }
 }
@@ -178,6 +229,20 @@ h1,h2,h3,h4 {
       background-color: #fff;
     }
   }
+
+  @media screen and (max-width: 769px) {
+    & {
+      min-height: 55vh;
+
+      .bg {
+        min-height: 55vh;
+      }
+
+      .info {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 footer {
@@ -189,4 +254,9 @@ footer {
   p {
     text-align: center;
   }
+}
+
+p.subtext {
+  color: #777;
+  font-size: 80% !important;
 }
